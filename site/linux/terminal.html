@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Что такое терминал?</title>
+    <link rel="shortcut icon" href="../images/logo.png" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/stylesforost.css">
+    <link rel="stylesheet" href="/css/darktheme.css">
+    <script src="../js/nav.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.14.3/video.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.14.3/video.min.js" defer></script>
+<script src="https://vjs.zencdn.net/7.14.3/lang/ru.js" defer></script>
+    <script src="/js/player.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/images/logo.png" alt="Логотип" class="logo-image">
+            <h1 class="logo-text">PC4Mamonts</h1>
+        </div>
+            <div class="menu-icon" id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <a href="/cabinet.html" class="profile-button">Личный кабинет</a> 
+            <nav id="navbar">
+                <ul class = "menu-ui">
+                    <li><a href="/index.html">Главная</a></li>
+                    <li><a href="/news.html">Новости</a></li>
+                    <li><a href="/workinwin.html">Работа в Windows</a></li>
+                    <li><a href="/workinlinux.html">Работа в Linux</a></li>
+                    <li><a href="/typing.html">Скорость печати</a></li>
+                    <li><a href="/about.html">О компании</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<style>
+   
+    </style>
+
+<body>
+
+
+  </body>
+
+    <main>
+        <h2 style="text-align: center;">Как начать работать в терминале Linux</h2>
+        
+        <section id="contents" class="contents"  class = p4>
+            <h3>Содержание</h3>
+            <ol>
+                <li><a href="#step1" class="step-link">Шаг 1: Что такое терминал?</a></li>
+                <li><a href="#step2" class="step-link">Шаг 2: Команда help.</a></li>
+                <li><a href="#step3" class="step-link">Шаг 3: Создание/изменение директорий.</a></li>
+                <li><a href="#step4" class="step-link">Шаг 4: Взаимодействие с файлами.</a></li>
+        </section>
+    
+        <section id="step1" class="step">
+            <h3>Шаг 1: Что такое терминал? </h3>
+            <p>Терминал - это программа, которая используется для взаимодействия с командной оболочкой.</p>
+           
+        </section>
+    
+        <section id="step2" class="step">
+            <h3>Шаг 2: Команда help. </h3>
+            <p>Вы можете вписать команду help и Вам будут предоставлен список команд. Либо можно прописать Вам непонятную команду и рядом help.</p>
+            <p>Тогда в таком случаи Вам будут показаны примеры аттрибутов для данной команды.</p>
+            <img src="../images/linuxhelp.png" alt="Команда Help" class="step-image"  >
+           
+           
+        
+            
+        </section>
+    
+        <section id="step3" class="step">
+            <h3>Шаг 3: Создание/изменение директорий. </h3>
+            <p> Для того, чтобы перейти в необходимое директорию впишите cd. </p>
+            <p> Для просмотра в директории всех файлов и директорий пропишите ls</p>
+            <p> Для копирования директории пропишите cpdir [название директории]</p>
+            <p> Для удаления директории пропишите rmdir [название директории]</p>
+            <p> Для создании директории пропишите mkdir [название директории]</p>
+            <img src="../images/linuxcdpng.png" alt="Перемещение в другую директорию" class="step-image">
+       
+        </section>
+        <section id="step4" class="step">
+            <h3>Шаг 4: Взаимодействие с файлами. </h3>
+            <p> Для того, чтобы просмотреть файл через текстовый редактор введите nano [название файла]. </p>
+            <p> Для копирования файла пропишите cp [название файла]</p>
+            <p> Для удаления файла rm [название файла]   </p>
+            <p> Для создании файла пропишите touch [название файла]</p>
+            <img src="../images/linuxrm.png" alt="Изменение файлов" class="step-image" style="width: 900px; height: 200px;">
+       
+        </section>
+       
+      
+        <section class="reactions">
+            <h3>Реакции на статью</h3>
+            <div class="reaction-buttons">
+                <button class="reaction" data-reaction="like">👍</button>
+                <button class="reaction" data-reaction="dislike">👎</button>
+                <button class="reaction" data-reaction="love">❤️</button>
+                <button class="reaction" data-reaction="wow">😮</button>
+                <button class="reaction" data-reaction="sad">😢</button>
+                <button class="reaction" data-reaction="angry">😡</button>
+            </div>
+        </section>
+
+        <section class="comments">
+           
+            <h3>Комментарии</h3>
+            <div class="comment-input">
+                <input type="text" placeholder="Ваше имя" id="name">
+                <textarea placeholder="Ваш комментарий" id="comment"></textarea>
+                <button id="submit-comment">Отправить</button>
+            </div>
+        
+                <div id="comment-list"></div>
+           
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 by Stanislav. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><img src="/images/icon/Telegram-logo.png" alt="Telegram"></a>
+                <a href="https://github.com/Breead1337" class="social-icon"><img src="/images/icon/GitHub-logo.png" alt="GitHub"></a>
+              
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="themeSwitch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        
+    </footer>
+    <div id="notification" class="notification" style="display: none;">
+        <div class="notification-icon"></div>
+        <div class="notification-message"></div>
+    </div>
+    <script src="../js/script.js"></script>
+    <script src="../js/scriptfor1.js"></script>
+    <script src="../js/window.js"></script>
+</body>
+<style>
+
+</style>
+<script>
+    </script>
+
+
+
+</body>
+</html>
