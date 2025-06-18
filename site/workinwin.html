@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/darktheme.css">
+
+
+
+    <title>Работа в Windows</title>
+    <link rel="shortcut icon" href="/images/logo.png" />
+</head>
+<body>
+    <script src="/js/nav.js"></script>
+    <header>
+        <div class="logo-container">
+            <img src="/images/logo.png" alt="Логотип" class="logo-image">
+            <h1 class="logo-text">PC4Mamonts</h1>
+        </div>
+            <div class="menu-icon" id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <a href="/cabinet.html" class="profile-button">Личный кабинет</a> 
+            <nav id="navbar">
+                <ul class = "menu-ui">
+                    <li><a href="/index.html">Главная</a></li>
+                    <li><a href="/news.html">Новости</a></li>
+                    <li><a href="/workinwin.html">Работа в Windows</a></li>
+                    <li><a href="/workinlinux.html">Работа в Linux</a></li>
+                    <li><a href="/typing.html">Скорость печати</a></li>
+                    <li><a href="/about.html">О компании</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="articles container">
+            <article class="article article-border"> <!-- Добавлен новый класс -->
+                <img src="/images/screenshot.png" alt="Скриншот" class="article-image full-width">
+                <div class="article-content">
+                    <h2 class="article-title">Как сделать скриншот?</h2>
+                    <p class = "p3">Скриншоты позволяют сохранять изображение экрана для последующего использования. В этой статье мы подробно расскажем, как сделать скриншот на различных операционных системах.</p>
+                    <a href="/windows/howdoscreen.html" class="more-button">Подробнее</a>
+                </div>
+            </article>
+            <article class="article article-border"> <!-- Добавлен новый класс -->
+                <img src="/images/installwin.jpg" alt="Установка Windows" class="article-image full-width">
+                <div class="article-content">
+                    <h2 class="article-title">Как установить Windows?</h2>
+                    <p class = "p3">Установка Windows может показаться сложной задачей, но в этой статье мы шаг за шагом покажем, как правильно установить операционную систему на ваш компьютер.</p>
+                    <a href="/windows/howdownloadwin.html" class="more-button">Подробнее</a>
+                </div>
+            </article>
+            <article class="article article-border"> <!-- Добавлен новый класс -->
+                <img src="/images/Winopenstudy.png" alt="Панель управления" class="article-image full-width">
+                <div class="article-content">
+                    <h2 class="article-title">Как начать работать в Windows</h2>
+                    <p class = "p3">Для начинающих пользователей Windows открывает мир возможностей. В этой статье мы расскажем о наиболее важных аспектах работы с операционной системой, включая настройку рабочего стола, использование интернета и регистрации mail ru. Присоединяйтесь к нам, чтобы сделать свои первые шаги в мире Windows!</p>
+                    <a href="/windows/howusewindows.html" class="more-button">Подробнее</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 by Stanislav. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><img src="/images/icon/Telegram-logo.png" alt="Telegram"></a>
+                <a href="https://github.com/Breead1337" class="social-icon"><img src="/images/icon/GitHub-logo.png" alt="GitHub"></a>
+              
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="themeSwitch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        
+    </footer>
+    <script src="js/scriptfor1.js"></script>
+    <script src="js/script.js"></script>
+
+
+<script>
+    // Получаем элемент переключателя темы
+    const themeSwitch = document.getElementById('themeSwitch');
+
+    // Проверяем сохранённую тему при загрузке страницы
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeSwitch.checked = true; // Устанавливаем состояние переключателя
+    } else {
+        document.body.classList.remove('dark-theme');
+        themeSwitch.checked = false; // Убираем состояние переключателя
+    }
+
+    // Слушаем изменение темы
+    themeSwitch.addEventListener('change', () => {
+        document.body.classList.toggle('dark-theme');
+
+        // Сохраняем текущую тему в localStorage
+        if (document.body.classList.contains('dark-theme')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+</body>
+</html>
