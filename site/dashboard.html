@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <style>
+     .stat-item {
+        text-align: center;
+     }
+     .chart-container {
+    width: 50%;  
+    height: 300px; 
+    position: relative; 
+     }
+     canvas {
+    width: 100%!important; 
+    height: 100%!important; 
+     }
+     .logout-button {
+    display: block; /* Меняем на block, чтобы кнопки шли друг под другом */
+    padding: 10px 20px;
+    margin: 15px auto 0; /* auto по бокам для центрирования */
+    background-color: #FF4D4D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: fit-content; /* Ширина по содержимому */
+}
+
+.test-button {
+    display: block; /* Блочное отображение для размещения под другой кнопкой */
+    padding: 10px 20px;
+    margin: 5px auto 0; /* Отступ сверху 5px и центрирование */
+    background-color: #05c008;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: fit-content; /* Ширина по содержимому */
+}
+
+        .logout-button:hover {
+            background-color: #FF1A1A; 
+        }
+        .test-button:hover {
+            background-color: #40cd0d; 
+        }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/stylesforost.css">
+    <link rel="stylesheet" href="/css/darktheme.css">
+</head>
+<header>
+    <div class="logo-container">
+        <img src="/images/logo.png" alt="Логотип" class="logo-image">
+        <h1 class="logo-text">PC4Mamonts</h1>
+    </div>
+    <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <a href="/cabinet.html" class="profile-button">Личный кабинет</a> 
+    <nav id="navbar">
+        <ul class="menu-ui">
+            <li><a href="/index.html">Главная</a></li>
+            <li><a href="/news.html">Новости</a></li>
+            <li><a href="/workinwin.html">Работа в Windows</a></li>
+            <li><a href="/workinlinux.html">Работа в Linux</a></li>
+            <li><a href="/typing.html">Скорость печати</a></li>
+            <li><a href="/about.html">О компании</a></li>
+        </ul>
+    </nav>
+
+</header>
+<body>
+    
+    <main>
+        <div class="dashboard-container">
+            <div class="stats">
+                <div class="stat-item">
+                    <h2>Добавление на сайт</h2>
+                    <p><span id="days-site"></span></p>
+                </div>
+                <div class="stat-item">
+                    <h2>Средняя скорость печати</h2>
+                    <p id="typing-speed">0 символов/мин</p>
+                </div>
+                <div class="stat-item">
+                    <h2>Пройденные тесты</h2>
+                    <p id="completed-tests">0</p>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <canvas id="typingSpeedChart" width="400" height="200"></canvas>
+                <canvas id="testsCompletedChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+        <button class="logout-button" onclick="clearLogin()">Выйти</button>
+        <button class="test-button"><a href="test.html">Перейти к тестам</a></button>
+    </main>
+    <script src="/js/script.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/window.js"></script>
+    <script src="/js/dash.js"></script>
+    <script>
+      
+    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 by Stanislav. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><img src="/images/icon/Telegram-logo.png" alt="Telegram"></a>
+                <a href="https://github.com/Breead1337" class="social-icon"><img src="/images/icon/GitHub-logo.png" alt="GitHub"></a>
+              
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="themeSwitch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        
+    </footer>
+    <script>
+        // Получаем элемент переключателя темы
+        const themeSwitch = document.getElementById('themeSwitch');
+    
+        // Проверяем сохранённую тему при загрузке страницы
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeSwitch.checked = true; // Устанавливаем состояние переключателя
+        } else {
+            document.body.classList.remove('dark-theme');
+            themeSwitch.checked = false; // Убираем состояние переключателя
+        }
+    
+        // Слушаем изменение темы
+        themeSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('dark-theme');
+    
+            // Сохраняем текущую тему в localStorage
+            if (document.body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
